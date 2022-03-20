@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  /* border: 1px solid red; */
+}
+#root{
+  position: relative;
+  width: 100%;
+  height: 100vh;   
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.imgDiv{  
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;    
+  filter: blur(10px);  
+  transform: scale(1.2);
+}
+.imgDiv>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.listCon{
+ flex: 25%;
+  overflow: auto;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  z-index: 1;
+}
+.listCon>h3{
+  padding: 10px;    
+  transition: .3s;
+  border-bottom: 1px solid rgb(95, 95, 95);  
+  cursor: pointer;
+}
+.listCon>h3:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.playerCon{
+  width: 75%;
+  height: 100%;  
+  position: relative;
+  z-index: 1;
+}
+.sTitle{
+  width: 90%;
+  margin: auto;
+  font-size: 100px;
+  margin-top: 50px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+}
+.playerDiv{
+  position: absolute;
+  width: 80%;
+  height: fit-content;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* background-color: white; */  
+}
+#audio{
+  width: 100%;  
+}
+.controls{
+  height: fit-content;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  padding: 20px;
+  border-radius: 30px;
+}
+.controls:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.progress{
+  width: 100%;
+  padding: 10px;
+  
+  display: flex;
+  align-items: center;
+}
+#timeL, #timeR{
+  flex: 15%;
+  text-align: center;
+}
+.progDiv{
+  flex: 80%;
+  box-shadow: 0px 0px 5px 1px rgb(196, 196, 196);
+  height: 5px;
+  position: relative;
+  border-radius: 5px;
+}
+#progColor{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  /* width: 30%; */
+  background-color: rgb(63, 63, 63);
+  border-radius: 5px;
+  transition: .2s;
+}
+.progDiv:hover #progColor{
+  background-color: white;
+}
+#progCover{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;  
+  cursor: pointer;
+}
+.btns{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 10px;
+}
+.fas{
+  display: block;
+  font-size: 25px;
+  color: rgb(63, 63, 63);
+  transition: .3s;
+}
+.fas:hover{
+  color: white;
+}

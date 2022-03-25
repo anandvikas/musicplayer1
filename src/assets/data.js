@@ -19,9 +19,10 @@
 const Data = [
     {
         id:1,
-        audio:'https://aac.saavncdn.com/192/e62dc0e13bde16d1b144d372bf27d5fa_320.mp4',
+        // audio:'https://aac.saavncdn.com/192/e62dc0e13bde16d1b144d372bf27d5fa_320.mp4',
+        audio : 'https://aac.saavncdn.com/192/e62dc0e13bde16d1b144d372bf27d5fa_320.mp4',
         name:'La Calin (Callmearco Remix)',
-        image:"https://c.saavncdn.com/192/La-Calin-Callmearco-Remix--English-2020-20210518073005-500x500.jpg"
+        image:"https://picsum.photos/500"
     },
     {
         id:2,
@@ -32,19 +33,19 @@ const Data = [
     {
         id:3,
         audio:"https://aac.saavncdn.com/150/3a3e160a2a1197539f7fe36192ea307f_320.mp4",
-        name:"Spoils of War Pt. 1",
+        name:"Spoils of War",
         image:"https://c.saavncdn.com/150/Game-of-Thrones-Season-7-Soundtrack-Highlights-English-2017-20170927130548-500x500.jpg"
     },
     {
         id:4,
         audio:"https://aac.saavncdn.com/236/3949076a0b1211b21b348fe71e12175f_320.mp4",
-        name:"GOT:The Night King Theme",
+        name:"The Night King Theme",
         image:"https://c.saavncdn.com/236/Game-Of-Thrones-The-Night-King-Theme-Season-8-English-2019-20190505091047-500x500.jpg"
     },
     {
         id:5,
         audio:"https://aac.saavncdn.com/252/ab2cb41cfff493e652bcd6eafb1232b9_320.mp4",
-        name:"Harry Potter Theme",
+        name:"Harry Potter",
         image:"https://c.saavncdn.com/252/New-Piano-Moods-English-2012-500x500.jpg"
     },
     {
@@ -56,13 +57,13 @@ const Data = [
     {
         id:7,
         audio:"https://aac.saavncdn.com/571/2cb22685dad01efd23278bb828500c47_320.mp4",
-        name:"Death Note (2006)",
+        name:"Death Note",
         image:"https://c.saavncdn.com/571/The-Anime-Collection-Volume-One-English-2018-20180923134709-500x500.jpg"
     },
     {
         id:8,
         audio:"https://aac.saavncdn.com/571/b7ff1240f94c526124adf9fdc9973344_320.mp4",
-        name:"Attack on Titan  (2013)",
+        name:"Attack on Titan",
         image:"https://c.saavncdn.com/571/The-Anime-Collection-Volume-One-English-2018-20180923134709-500x500.jpg"
     },
 ]

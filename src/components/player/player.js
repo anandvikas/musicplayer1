@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import Data from "../../assets/data";
+import './player.css'
+import spell from './spell.wav'
+
 const Player = (props) => {
     const [ind, updateInd] = useState(props.index)
     const [time1, Utime1] = useState('0:00')
@@ -76,14 +79,74 @@ const Player = (props) => {
         // console.log(newtime, td)
         document.getElementById('audio').currentTime = newtime
     }
+    // CODE FOR VISUALISER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    // let audiosource;
+    // let analyser;
+    // const playVisualiser = () => {
+    //     const canvas1 = document.getElementById('canvas1')
+    //     canvas1.height = window.innerHeight
+    //     canvas1.width = window.innerWidth
+    //     const ctx = canvas1.getContext('2d')
 
+    //     const audio = document.getElementById('audio');  
+    //     // audio.crossOrigin = 'anonymous'      
+    //     console.log(audio.files)
+        
+    //     const audioContext = new AudioContext();        
+    //     audiosource = audioContext.createMediaElementSource(audio);
+    //     analyser = audioContext.createAnalyser();
+    //     analyser = audioContext.createAnalyser();
+    //     audiosource.connect(analyser);
+    //     analyser.connect(audioContext.destination);
+    //     analyser.fftSize = 128;
+    //     const bufferLength = analyser.frequencyBinCount;
+    //     const dataArray = new Uint8Array(bufferLength);
+    //     const barWidth = 3;
+    //     let barHeight;
+    //     let x;
+    //     function animate() {
+    //         x = 0;
+    //         ctx.clearRect(0, 0, canvas1.width, canvas1.height);
+    //         analyser.getByteFrequencyData(dataArray);
+    //         // drawVisualiser(canvas1, ctx, bufferLength, x, barWidth, barHeight, dataArray)
+    //         for (let i = 0; i < bufferLength; i++) {
+    //             barHeight = dataArray[i] * 1 + 10;
+    //             ctx.save();
+    //             ctx.translate(canvas1.width / 2, canvas1.height / 2);
+    //             ctx.rotate(i * Math.PI * 5 / bufferLength);
+    //             let hue = i * 5;
+    //             ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+    //             ctx.fillRect(0, 0, barWidth, barHeight);
+    //             x += barWidth;
+    //             ctx.restore();
+    //         }
+
+    //         requestAnimationFrame(animate)
+    //     }
+    //     animate()
+    // }
+    // function drawVisualiser(canvas1, ctx, bufferLength, x, barWidth, barHeight, dataArray) {
+    //     for (let i = 0; i < bufferLength; i++) {
+    //         barHeight = dataArray[i] * 1 + 10;
+    //         ctx.save();
+    //         ctx.translate(canvas1.width / 2, canvas1.height / 2);
+    //         ctx.rotate(i * Math.PI * 5 / bufferLength);
+    //         let hue = i * 5;
+    //         ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+    //         ctx.fillRect(0, 0, barWidth, barHeight);
+    //         x += barWidth;
+    //         ctx.restore();
+    //     }
+    // }
     return (
         <>
-            <div className='imgDiv'><img src={Data[ind].image} alt='cover image'/></div>
+            <div className='imgDiv'><img src={Data[ind].image} alt='cover image' /></div>
             <div className='playerCon'>
                 <h1 className="sTitle"><marquee>{Data[ind].name}</marquee></h1>
+                {/* <div className="visualiserCon"><canvas id="canvas1"></canvas></div> */}
                 <div className='playerDiv'>
-                    <audio src={Data[ind].audio} id='audio' autoPlay onTimeUpdate={timeUpdated} onEnded={skipNext}></audio>
+                    <audio src={Data[ind].audio} id='audio' autoPlay onTimeUpdate={timeUpdated} onEnded={skipNext} ></audio>
+                    {/* <audio src={spell} id='audio' autoPlay onTimeUpdate={timeUpdated} onEnded={skipNext} onPlay={playVisualiser}></audio> */}
                     <div className="controls">
                         <div className="progress">
                             <div id="timeL">{time1}</div>
